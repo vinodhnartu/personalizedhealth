@@ -1,0 +1,20 @@
+<main class="main" id="main">
+  <div class="coming_soon_section">
+    <div
+      class="content_area text-center gap-30 d-flex flex-column align-items-center justify-content-center"
+    >
+      <a
+        *ngIf="!onbordingUrl"
+        class="homepage_link primary_btn"
+        (click)="startAssessment()"
+        >Start Assessment</a
+      >
+      <iframe
+        *ngIf="onbordingUrl"
+        [src]="onbordingUrl"
+        height="100%"
+        width="100%"
+      ></iframe>
+    </div>
+  </div>
+</main>

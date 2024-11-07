@@ -1,1 +1,330 @@
-/* You can add global styles to this file, and also import other style files */
+//Global css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Global Variables */
+:root {
+    --font: "Poppins", sans-serif;
+    --heading:"Poppins", sans-serif;
+    --green: #466558;
+    --gray: #ECEDE3;
+    --black: #2F2F2F;
+    --white: #F9FAF7;
+    --red: #E45333;
+}
+/* Reset CSS & Remove outline for non-keyboard :focus */
+*:focus:not(:focus-visible), .btn-close:focus:not(:focus-visible) {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:focus, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+select::-ms-expand, input::-ms-expand {
+    display: none;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+input {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+/* keyboard focus for accessibility outline */
+input:focus, .form-control:focus, select:focus {
+    outline: none;
+}
+input[type="radio"]:focus + label, input[type="checkbox"]:focus + label, input[type="file"]:focus + label {
+    outline: 2px solid #2F2F2F;
+    outline-offset: 3px;
+    outline-style: auto;
+    border-radius: 1px;
+}
+input[type="radio"] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+input[type="radio"] + label {
+    margin-left: 10px;
+}
+input:focus:not(:focus-visible) + label {
+    outline: none;
+}
+a {
+    cursor: pointer !important;
+}
+a:focus {
+    outline: 2px solid #2F2F2F;
+    outline-style: auto;
+    outline-offset: 0px;
+    border-radius: 1px;
+}
+button:focus {
+    outline: none;
+}
+input:focus:not(:focus-visible),.form-control:focus:not(:focus-visible),select:focus:not(:focus-visible),button:focus:not(:focus-visible),a:focus:not(:focus-visible) {
+    outline: none;
+}
+button:focus-visible {
+    outline: 2px solid #2F2F2F!important;
+    outline-style: auto!important;
+    outline-offset: 3px;
+    border-radius: 1px;
+}
+.tab_focus:focus {
+    outline: 2px solid #2F2F2F;
+    outline-style: auto;
+    outline-offset: 0px;
+    border-radius: 1px;
+}
+.tab_focus.primary_btn:focus {
+    outline-offset: 3px;
+}
+button.tab_focus:focus {
+    outline-offset: 3px;
+}
+.form-control.tab_focus:focus {
+    outline: 2px solid #2F2F2F;
+    outline-style: auto;
+    outline-offset: 3px;
+    border-radius: 1px;
+}
+/* Body style */
+body, html {
+    min-height: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #2F2F2F;
+    font-size: 16px;
+    background-color: #F9FAF7;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+.light {
+    font-weight: 300!important;
+}
+.regular {
+    font-weight: 400!important;
+}
+.medium {
+    font-weight: 500!important;
+}
+.semibold {
+    font-weight: 600!important;
+}
+.bold {
+    font-weight: 700!important;
+}
+.help-block, .help_block, .text_red {
+    color: #E45333!important;
+}
+.text_white {
+    color: #F9FAF7!important;
+}
+.text_black {
+    color: #2F2F2F;
+}
+.bg_green {
+    background-color: #466558;
+}
+.h1 {
+    font-size: clamp(28px, 3vw, 40px);
+}
+.h2 {
+    font-size: clamp(24px, 2vw, 32px);
+}
+.h3 {
+    font-size: clamp(20px, 2vw, 26px);
+}
+/* Few common styles */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+strong {
+    font-weight: 700;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p {
+    margin: 0 0 15px;
+}
+.hidden-sm {display: none;}
+.visible-xs {display: none}
+/* Header css */
+.promo_banner p {
+    line-height: 1.2;
+    font-size: clamp(14px, 1.5vw, 16px);
+    margin: 0px auto;
+}
+.header {
+    background-color: #F9FAF7;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+.navbar .nav-link {
+    font-size: 21.6px;
+    font-weight: 500;
+    color: #2F2F2F;
+    white-space: nowrap
+}
+.site_logo_img {
+    max-width: 435px;
+    width: 100%;
+}
+.content_area {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0 6%;
+}
+body.magnificpopupnoscroll {
+    overflow-y: hidden!important;
+}
+.mfp-iframe-holder .mfp-content {
+    max-width: 1170px!important;
+}
+.border_btn {
+    border-radius: 0 32.4px!important;
+    border: 2.7px solid currentColor;
+    color: #2F2F2F;
+    font-size: 21.6px;
+    font-weight: 700;
+    padding: 5px 20px;
+    min-width: 140px;
+    height: 45px;
+    text-align: center;
+}
+.primary_btn {
+    border-radius: 0 32.4px!important;
+    border: 2.7px solid #466558;
+    color: #F9FAF7;
+    background-color: #466558;
+    font-size: 21.6px;
+    font-weight: 600;
+    padding: 9px 50px;
+    min-width: 140px;
+    text-align: center;
+}
+.coming_soon_section {
+    background-color: #F9FAF7;
+    min-height: 75vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+/* Footer css */
+.footer {
+    padding: 70px 0 40px;
+    background-color: #466558;
+    color: #F9FAF7;
+}
+.footer_nav .nav-item {
+    position: relative;
+}
+.footer_nav .nav-item:not(:last-child)::before {
+    position: absolute;
+    right: -25px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #F9FAF7;
+    border-radius: 50%;
+    top: 10px;
+}
+.footer_nav .nav-link {
+    color: #F9FAF7;
+    padding: 0;
+}
+.footer_nav .nav-link:hover {
+    text-decoration: underline;
+    color: #F9FAF7;
+}
+.footer_statement p {
+    font-size: 12.6px;
+    max-width: 142ch;
+    margin: 0px auto;
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1529px) {
+    .content_area {padding: 0 50px;}
+    
+}
+/* Medium large screen */
+@media only screen and (min-width: 1201px) and (max-width: 1439px) {
+    .content_area {padding: 0 50px;}
+
+}
+
+/* Medium screen */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .content_area {padding: 0 50px;}
+    .navbar-brand {max-width: 300px;}
+    .navbar-expand-md .navbar-nav {gap: 10px!important;}
+    #siteNav {padding: 0!important;}
+    .border_btn {font-size: 16px;height: auto;min-width: 120px;}
+    .navbar .nav-link {font-size: 16px}
+}
+
+/* Tablet screen */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .content_area {padding: 0 15px;}
+    .navbar-brand {max-width: 300px;}
+    .navbar-expand-md .navbar-nav {gap: 10px!important;}
+    #siteNav {padding: 0!important;}
+    .border_btn {font-size: 16px;height: auto;min-width: 120px;}
+    .navbar .nav-link {font-size: 16px}
+
+}
+
+/* Mobile screen */
+@media only screen and (max-width: 767px) {
+    .hidden-xs, .rwd_line {display: none;}
+    .hidden-sm {display: inline-block!important;}
+    .visible-xs {display: block!important}
+    .promo_banner p {max-width: 25ch;}
+    .content_area {padding: 0 15px;}
+    #siteNav {position: absolute;top: 55px;background-color: #fff;left: 0;width: 100%;padding: 0 0 15px 0!important;border-top: 1px solid rgba(0,0,0, .1);}
+    #siteNav ul.navbar-nav {gap: 0!important;}
+    .navbar .nav-link {font-size: 18px;}
+    .navbar .nav-item {padding: 0 15px;}
+    .primary_btn {font-size: 18px;height: auto}
+    .primary_btn {padding: 5px 25px;min-width: 130px;font-size: 12px;height: auto;}
+    .border_btn {font-size: 18px;padding: 3px 0;height: auto;}
+    .navbar-brand {max-width: 230px;}
+    button.navbar-toggler {padding: 0;margin: 0;border: none;border-radius: 0;}
+    .footer {padding: 30px 0}
+    .footer_nav .nav {gap: 10px 50px!important;max-width: 350px;margin: 0px auto;}
+    .footer_nav .nav-item:nth-child(2)::before {display: none;}
+    
+    
+    
+}

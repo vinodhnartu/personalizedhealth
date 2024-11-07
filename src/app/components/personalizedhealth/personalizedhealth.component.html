@@ -1,0 +1,87 @@
+<div class="promo_banner py-2 bg_green">
+  <div class="content_area text-center">
+      <p class="mb-0 text_white">Get $100 Off+ Free Nutritionist Consultations. <a href="#" class="bold text-white text-decoration-underline">Get started</a></p>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header sticky-top py-3" id="header">
+  <nav class="navbar navbar-expand-md p-0">
+      <div class="content_area d-flex justify-content-between align-items-center gap-5">
+          <a href="./index.html"><img class="navbar-brand m-0" fetchpriority="high" src="/images/personalizedhealthrx-logo.svg" alt="Personalized Health Logo"></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <img src="/images/hamburger.svg" width="26" height="15" alt="Menu" loading="lazy">
+          </button>
+
+          <div class="collapse navbar-collapse flex-grow-0 px-5" id="siteNav">
+              <ul class="navbar-nav gap-5">
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/weight-loss']" routerLinkActive="router-link-active" >weight loss</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="menopause">menopause</a>
+                  </li>
+                  <li class="nav-item d-block d-md-none">
+                      <a href="./coming-soon.html" class="border_btn">login</a>
+                  </li>
+              </ul>
+          </div>
+          
+          <div class="login_btn d-none d-md-block">
+              <a href="./coming-soon.html" class="border_btn">login</a>
+          </div>
+      </div>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="content_area">
+      <div class="footer_content text-center">
+          <div class="site_footer_logo">
+              <a href="./index.html"><img class="site_footer_logo d-block" src="/images/personalizedhealthrx-footer-logo.svg" width="467" height="101" alt="Personalized Health Logo" loading="lazy"></a>
+          </div>
+          
+          <div class="social_icons my-5">
+              <ul class="social_links d-flex justify-content-center align-items-center gap-5">
+                  <li><a href="./" target="_blank"><img src="/images/facebook-icon.svg" width="44" height="44" alt="Facebook" loading="lazy"></a></li>
+                  <li><a href="./" target="_blank"><img src="/images/instagram-icon.svg" width="45" height="44" alt="Instagram" loading="lazy"></a></li>
+                  <li><a href="./" target="_blank"><img src="/images/linkedin-icon.svg" width="44" height="44" alt="LinkedIn" loading="lazy"></a></li>
+              </ul>
+          </div>
+          
+          <div class="footer_nav">
+              <ul class="nav justify-content-center gap-5">
+                  <li class="nav-item">
+                      <a class="nav-link" href="./coming-soon.html">safety information</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./coming-soon.html">medical consent</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./coming-soon.html">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./coming-soon.html">contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./coming-soon.html">legal</a>
+                  </li>
+              </ul>
+          </div>
+          
+          <div class="footer_statement mt-4 mb-5">
+              <p class="mb-0">Tailored Med Rx is a patient management platform that works with independent physicians and practitioners who provide services utilizing the Tailored Med Rx Platform. Tailored Med Rx does not directly provide medical or pharmacy services and payment does not guarantee the writing or dispensing of a prescription. Medical services are provided via MD Integrations and Cuerxa Pharmacy. The information provided on this website is for informational purposes and not a substitute for professional medical advice, diagnosis, or treatment. If you have questions or concerns about your health, please talk to your doctor. This site is an advertisement for services and not any specific medication.</p>
+          </div>
+          
+          <div class="footer_address">
+              <p>123 anywhere street, anytown, ST 12345</p>
+              <p class="mb-0">&copy; 2024 Tailored Med Rx</p>
+          </div>
+      </div>
+  </div>
+</footer>
