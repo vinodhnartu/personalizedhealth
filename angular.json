@@ -31,9 +31,18 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/slick-carousel/slick/slick.css",
+              "./node_modules/slick-carousel/slick/slick-theme.css",
+              "./node_modules/glightbox/dist/css/glightbox.min.css"
+              
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/slick-carousel/slick/slick.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+             
+              "./node_modules/glightbox/dist/js/glightbox.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -45,8 +54,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "20kB"
                 }
               ],
               "outputHashing": "all"

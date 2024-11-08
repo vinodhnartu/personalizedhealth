@@ -1,4 +1,4 @@
-<main class="main" id="main">
+<!-- <main class="main" id="main">
   <div class="coming_soon_section">
     <div
       class="content_area text-center gap-30 d-flex flex-column align-items-center justify-content-center"
@@ -11,6 +11,27 @@
       >
       <iframe
         *ngIf="onbordingUrl"
+        [src]="onbordingUrl"
+        height="100%"
+        width="100%"
+      ></iframe>
+    </div>
+  </div>
+</main> -->
+<main class="main" id="main">
+  <div class="coming_soon_section">
+    <div
+      class="content_area text-center gap-30 d-flex flex-column align-items-center justify-content-center"
+    >
+      <div *ngIf="loading" class="loader"></div> <!-- Spinner Loader -->
+      <a
+        *ngIf="!onbordingUrl && !loading"
+        class="homepage_link primary_btn"
+        (click)="startAssessment()"
+        >Start Assessment</a
+      >
+      <iframe
+        *ngIf="onbordingUrl && !loading"
         [src]="onbordingUrl"
         height="100%"
         width="100%"

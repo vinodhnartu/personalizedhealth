@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../Services/auth.service';
 import { NgIf } from '@angular/common';
-import {
-  DomSanitizer,
-  SafeResourceUrl,
-  SafeUrl,
-} from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-weight-loss',
@@ -16,11 +12,13 @@ import {
 })
 export class WeightLossComponent {
   onbordingUrl: any;
+  loading = false;
   constructor(
     private authService: AuthService,
     private domsanitizer: DomSanitizer
   ) {}
   startAssessment() {
+    this.loading=true;
     this.authService.getToken().subscribe((res: any) => {
       if (res?.access_token) {
         this.authService
@@ -31,6 +29,7 @@ export class WeightLossComponent {
                 this.domsanitizer.bypassSecurityTrustResourceUrl(
                   res.onboarding_url
                 );
+                this.loading=false;
             }
           });
       }
